@@ -24,7 +24,8 @@ values
             'tenants.members.assign',
             'tenants.roles.edit',
             'tenants.roles.create',
-            'tenants.roles.delete'
+            'tenants.roles.delete',
+            'tenants.audit.view'
         ]::public.app_permission[],
         'Moderators can read tenants, invite, assign and remove tenant members, create and delete tenant roles'
     ),

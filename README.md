@@ -212,6 +212,6 @@ MIT License - feel free to use this template in your own projects.
 
 ### Planned Features
 
-- [ ] Audit logging system where only system can write logs, authorised users can read logs
+- [x] Audit logging system where only system can write logs, authorised users can read logs
 - [ ] Invite users to join tenants using SMTP and role assignment in the invite
 - [ ] Custom roles?

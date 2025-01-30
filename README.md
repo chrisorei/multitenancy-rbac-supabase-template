@@ -12,6 +12,7 @@ This template provides a robust foundation for building multi-tenant application
 - 🔐 **Role-Based Access Control**: Flexible permission system
 - 🔑 **Row Level Security**: Secure data access patterns
 - 🌍 **System-wide and Tenant-specific Roles**: Granular access control
+- 📝 **Comprehensive Audit Logging**: Track all system events
 - ⚡ **Ready-to-use**: Just clone and deploy
 
 ## Architecture
@@ -55,6 +56,36 @@ Collections of permissions:
 Managed through the `tenant_user_roles` table:
 - System-wide roles (null tenant_id)
 - Tenant-specific roles
+
+### Audit Logging System
+
+The system includes a comprehensive audit logging mechanism that tracks all important events:
+
+#### Event Types
+- **User Events**
+  - User creation, updates, and deletion
+  - Authentication events (login/logout)
+  - Role assignments and removals
+- **Tenant Events**
+  - Tenant creation, updates, and deletion
+  - Member additions and removals
+  - Role assignments within tenants
+- **Role Management**
+  - Role creation and deletion
+  - Role permission updates
+  - System and tenant-level role changes
+
+#### Audit Log Features
+- **Secure Logging**: Only the system can write logs
+- **Rich Metadata**: Each log entry includes:
+  - Timestamp
+  - Event type
+  - Actor (user who performed the action)
+  - Tenant context (if applicable)
+  - Detailed event description
+  - Additional metadata
+- **Access Control**: Logs are accessible based on user permissions
+- **Querying**: Supports filtering by date, event type, tenant, and actor
 
 ## Getting Started
 
